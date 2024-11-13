@@ -1,19 +1,18 @@
 package ca.warp7.frc2024.Subsystems.Drivetrain.Gyro;
 
-import ca.warp7.frc2024.Subsystems.Drivetrain.Drivetrain;
+import ca.warp7.frc2024.Subsystems.Drivetrain.DrivetrainSubsystem;
 import edu.wpi.first.math.geometry.Pose2d;
 
 public class GyroIOSim implements GyroIO{
-    Drivetrain drivetrain;
+    DrivetrainSubsystem drivetrain;
 
     private Pose2d simOdometry = new Pose2d();
     
-    public GyroIOSim(Drivetrain drivetrain) {
+    public GyroIOSim(DrivetrainSubsystem drivetrain) {
         this.drivetrain = drivetrain; 
     }
     
-    private void calculateAngle() {
-    }
+    private void calculateAngle() {}
 
 
     @Override
