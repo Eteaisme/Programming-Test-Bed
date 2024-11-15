@@ -1,6 +1,7 @@
 package ca.warp7.frc2024.Subsystems.Drivetrain.Gyro;
 
 import org.littletonrobotics.junction.AutoLog;
+
 import edu.wpi.first.math.geometry.Rotation2d;
 
 public interface GyroIO {
