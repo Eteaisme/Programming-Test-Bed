@@ -4,11 +4,26 @@
 
 package ca.warp7.frc2024;
 
+import ca.warp7.frc2024.Subsystems.Drivetrain.DrivetrainSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
 
 public class RobotContainer {
+  // Subsystems 
+  private final DrivetrainSubsystem drivetrain; 
+
   public RobotContainer() {
+    switch (Constants.CURRENT_MODE) {
+      case REAL:
+        drivetrain = new DrivetrainSubsystem(); 
+        break;
+      case SIM:
+        drivetrain = new DrivetrainSubsystem(); 
+        break; 
+      default:
+        drivetrain = new DrivetrainSubsystem(); 
+        break;
+    }
     configureBindings();
   }
 

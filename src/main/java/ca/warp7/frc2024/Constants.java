@@ -7,6 +7,12 @@ import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
 import edu.wpi.first.math.util.Units;
 
 public final class Constants {
+        public static enum MODE {
+        REAL,
+        SIM,
+        REPLAY
+    }
+    public static final MODE CURRENT_MODE = MODE.REAL;
     public static final class kDrivetrain {
 
         public static final double kTrackWidthX = Units.inchesToMeters(26.5);
@@ -59,5 +65,8 @@ public final class Constants {
         public static final double kTurnSpeakerRateTolerance = 0.02;
 
         public static final double angleThreshold = 3;
+        
+        private static final double DRIVE_BASE_RADIUS = Math.hypot(kTrackWidthX / 2.0, kTrackWidthY / 2.0);
+        private static final double MAX_ANGULAR_SPEED = kMaxSpeedMetersPerSecond / DRIVE_BASE_RADIUS;
     }
 }
